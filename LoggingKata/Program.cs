@@ -54,14 +54,14 @@ namespace LoggingKata
             // Create a new Coordinate with your locB's lat and long
             // Now, compare the two using `.GetDistanceTo()`, which returns a double
             // If the distance is greater than the currently saved distance, update the distance and the two `ITrackable` variables you set above
-            for(int i = 0; locations.Length > 0; i++)
+            for(int i = 0; locations.Length > i; i++)
             {
                 var locA = locations[i];
                 var corA = new GeoCoordinate();
                 corA.Latitude = locA.Location.Latitude;
                 corA.Longitude = locA.Location.Longitude;
 
-                for(int j = 0; locations.Length > 0; j++)
+                for(int j = 0; locations.Length > j; j++)
                 {
                     var locB = locations[j];
                     var corB = new GeoCoordinate();
